@@ -20,6 +20,7 @@
   "homepage": "https://github.com/AndreMcCa/Black-Jack#readme",
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-export-default-from": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "autoprefixer": "^10.4.0",

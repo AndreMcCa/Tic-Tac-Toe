@@ -1,0 +1,5 @@
+.square {
+    width: calc(600px / 3);
+    height: calc(600px / 3);
+    border: 1px solid black;
+}
