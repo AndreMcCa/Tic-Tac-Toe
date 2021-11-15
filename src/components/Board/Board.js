@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Square from "../Square/Square";
 import s from "./Board.module.css";
 
@@ -17,3 +18,8 @@ function Board({ squares, onHandlerSquareClick }) {
 }
 
 export default Board;
+
+Board.propTypes = {
+  squares: PropTypes.array.isRequired,
+  onHandlerSquareClick: PropTypes.func.isRequired,
+};

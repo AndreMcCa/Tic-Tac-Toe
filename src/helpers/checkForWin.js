@@ -1,5 +1,3 @@
-// import { X_PLAYER, O_PLAYER } from "../constants/game-constants";
-
 export default function checkForWin(allPlayers, playersPositionsArray) {
   const sets = [
     [0, 1, 2],

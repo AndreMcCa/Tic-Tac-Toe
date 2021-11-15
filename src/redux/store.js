@@ -7,5 +7,3 @@ const rootReducer = combineReducers({ game: gameReducer });
 const store = createStore(rootReducer, composeWithDevTools());
 
 export default store;
-
-// Новая игра при окончании ходов

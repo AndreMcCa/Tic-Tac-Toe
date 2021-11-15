@@ -7,4 +7,6 @@
   text-align: center;
   line-height: calc(600px / 3);
   text-shadow: 4px 4px 6px rgba(70, 70, 70, 0.8);
+
+  user-select: none;
 }

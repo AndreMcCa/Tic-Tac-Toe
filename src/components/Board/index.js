@@ -2,6 +2,7 @@ import Board from "./Board";
 import { connect } from "react-redux";
 import * as actions from "../../redux/game/game-actions";
 import checkForWin from "../../helpers/checkForWin";
+import isThereMove from "../../helpers/isThereMove";
 import store from "../../redux/store";
 
 const mapStateToProps = state => ({ squares: state.game.board });
@@ -22,6 +23,11 @@ const mapDispatchToProps = dispatch => ({
 
     if (checkForWin(players, store.getState().game.board)) {
       dispatch(actions.showWinner(currentPlayer));
+      return;
+    }
+
+    if (isThereMove(store.getState().game.board)) {
+      dispatch(actions.newGame());
       return;
     }
 
