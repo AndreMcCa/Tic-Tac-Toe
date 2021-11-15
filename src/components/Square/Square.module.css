@@ -1,5 +1,10 @@
 .square {
-    width: calc(600px / 3);
-    height: calc(600px / 3);
-    border: 1px solid black;
+  width: calc(600px / 3);
+  height: calc(600px / 3);
+  border: 1px solid rgba(214, 214, 214, 0.6);
+
+  font-size: 150px;
+  text-align: center;
+  line-height: calc(600px / 3);
+  text-shadow: 4px 4px 6px rgba(70, 70, 70, 0.8);
 }

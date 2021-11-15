@@ -4,9 +4,13 @@ import s from "./Square.module.css";
 
 export default function Square({ value, onClick }) {
   return (
-    <div className={s.square} onClick={onClick}>{value ? value : ""}</div>
+    <div className={s.square} onClick={onClick}>
+      {value ? value : null}
+    </div>
   );
 }
+
 Square.protTypes = {
   value: PropTypes.string,
+  onClick: PropTypes.func,
 };
