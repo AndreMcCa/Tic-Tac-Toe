@@ -2,7 +2,7 @@ import { CHANGE_QUEUE, X_PLAYER, O_PLAYER, NEW_GAME } from "../../../constants/g
 
 const initialPlayers = [X_PLAYER, O_PLAYER];
 
-const playersReducer = (players = initialPlayers, { type }) => {
+const players = (players = initialPlayers, { type }) => {
   switch (type) {
     case CHANGE_QUEUE:
       return players.reverse();
@@ -14,4 +14,4 @@ const playersReducer = (players = initialPlayers, { type }) => {
   }
 };
 
-export default playersReducer;
+export default players;

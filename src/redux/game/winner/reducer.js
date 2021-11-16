@@ -1,6 +1,6 @@
 import { IS_WINNER, NEW_GAME } from "../../../constants/game-constants";
 
-const winnerReducer = (winner = null, { type, payload }) => {
+const winner = (winner = null, { type, payload }) => {
   switch (type) {
     case IS_WINNER:
       return payload;
@@ -12,4 +12,4 @@ const winnerReducer = (winner = null, { type, payload }) => {
   }
 };
 
-export default winnerReducer;
+export default winner;

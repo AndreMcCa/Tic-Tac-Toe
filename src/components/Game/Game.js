@@ -4,7 +4,7 @@ import Board from "../Board";
 import Button from "../Button";
 import s from "./Game.module.css";
 
-function Game({ currentPlayer, winner, onHandlerNewGameButton }) {
+function Game({ currentPlayer, winner, newGame }) {
   return (
     <>
       <h1 className={s.heading}>Tic Tac Toe</h1>
@@ -14,7 +14,7 @@ function Game({ currentPlayer, winner, onHandlerNewGameButton }) {
       </div>
       {winner && <p className={s.text}>Winner: {winner}</p>}
       {winner && (
-        <Button className="button" type="button" onClick={() => onHandlerNewGameButton()}>
+        <Button className="button" type="button" onClick={() => newGame()}>
           New Game
         </Button>
       )}
@@ -25,7 +25,7 @@ function Game({ currentPlayer, winner, onHandlerNewGameButton }) {
 Game.propTypes = {
   currentPlayer: PropTypes.string.isRequired,
   winner: PropTypes.string,
-  onHandlerNewGameButton: PropTypes.func,
+  newGame: PropTypes.func,
 };
 
 export default Game;

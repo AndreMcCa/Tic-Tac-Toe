@@ -1,9 +1,9 @@
-import { combineReducers, createStore } from "redux";
+import { combineReducers, createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+
 import { composeWithDevTools } from "redux-devtools-extension";
-import gameReducer from "./game/game-reducer";
+import reducer from "./game/reducer";
 
-const rootReducer = combineReducers({ game: gameReducer });
-
-const store = createStore(rootReducer, composeWithDevTools());
-
+const rootReducer = combineReducers({ game: reducer });
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 export default store;
