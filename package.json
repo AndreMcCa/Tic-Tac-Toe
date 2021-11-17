@@ -1,23 +1,18 @@
 {
-  "name": "blackjack",
+  "name": "tic-tac-toe",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
-  "scripts": {
-    "start": "webpack serve --mode=development",
-    "build": "webpack --mode=production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AndreMcCa/Black-Jack.git"
-  },
   "keywords": [],
   "author": "AndreMcCa",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AndreMcCa/Black-Jack/issues"
+  "homepage": "https://AndreMcCa.github.io/Tic-Tac-Toe",
+  "scripts": {
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/AndreMcCa/Black-Jack#readme",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-export-default-from": "^7.16.0",
@@ -30,6 +25,7 @@
     "eslint": "^8.2.0",
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^3.2.3",
     "handlebars-loader": "^1.7.1",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",

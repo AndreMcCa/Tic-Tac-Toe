@@ -10,7 +10,7 @@ export default function Square({ value, onClick }) {
   );
 }
 
-Square.protTypes = {
+Square.propTypes = {
   value: PropTypes.string,
   onClick: PropTypes.func,
 };

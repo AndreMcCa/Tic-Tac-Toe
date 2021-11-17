@@ -1,6 +1,9 @@
 import Board from "./Board";
 import { connect } from "react-redux";
-import { onHandlerSquareClick } from "../../redux/game/board/thunk";
+import { onSquareClick } from "../../redux/game/thunk";
+import { createStructuredSelector } from "reselect";
+import { getBoard } from "../../redux/game/selectors";
 
-const mapStateToProps = state => ({ squares: state.game.board });
-export default connect(mapStateToProps, { onHandlerSquareClick })(Board);
+const mapStateToProps = createStructuredSelector({ squares: getBoard });
+
+export default connect(mapStateToProps, { onSquareClick })(Board);

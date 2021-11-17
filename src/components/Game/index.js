@@ -1,23 +1,14 @@
 import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
 import Game from "./Game";
-
-import { newGame } from "../../redux/game/action";
+import { newGame } from "../../redux/game/actions";
 import { getCurrentPlayer, getWinner } from "../../redux/game/selectors";
+import { createStructuredSelector } from "reselect";
 
-const mapStateToProps = (state) => ({ currentPlayer: getCurrentPlayer(state), winner: getWinner(state) });
-const mapDispatchToProps = (dispatch) => ({
-  newGame: () => {
-    dispatch(newGame());
-  },
+const mapStateToProps = createStructuredSelector({
+  currentPlayer: getCurrentPlayer,
+  winner: getWinner,
 });
-// const mapStateToProps = createStructuredSelector({
-//   currentPlayer,
-//   winner,
-// });
-//
-// const mapDispatchToProps = {
-//   newGame,
-// };
+
+const mapDispatchToProps = { newGame };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Game);

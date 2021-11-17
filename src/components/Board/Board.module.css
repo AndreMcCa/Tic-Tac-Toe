@@ -1,9 +1,9 @@
 .board {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-  width: 600px;
-  height: 600px;
-  background-color: rgba(214, 214, 214, 0.2);
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+    width: 600px;
+    height: 600px;
+    background-color: rgba(214, 214, 214, 0.2);
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
 }

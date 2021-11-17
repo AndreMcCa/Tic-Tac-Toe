@@ -14,7 +14,7 @@ function Game({ currentPlayer, winner, newGame }) {
       </div>
       {winner && <p className={s.text}>Winner: {winner}</p>}
       {winner && (
-        <Button className="button" type="button" onClick={() => newGame()}>
+        <Button className="button" type="button" onClick={newGame}>
           New Game
         </Button>
       )}
